@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bottom_help"
+        android:title="Help"
+        android:icon="@drawable/baseline_handshake_24"/>
+
+    <item
+        android:id="@+id/bottom_map"
+        android:title="Map"
+        android:icon="@drawable/baseline_location_on_24"/>
+
+    <item
+        android:id="@+id/bottom_bot"
+        android:title="Shinebot"
+        android:icon="@drawable/twotone_aod_24"/>
+
+    <item
+        android:id="@+id/bottom_learn"
+        android:title="Learn"
+        android:icon="@drawable/baseline_airplay_24"/>
+
+    <item
+        android:id="@+id/bottom_profile"
+        android:title="Profile"
+        android:icon="@drawable/baseline_account_circle_24"/>
+
+</menu>
