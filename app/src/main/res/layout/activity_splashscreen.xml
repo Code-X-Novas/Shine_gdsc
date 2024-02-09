@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -7,4 +8,37 @@
     android:layout_height="match_parent"
     tools:context=".splashscreen">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#E2F0FF"
+        >
+
+
+    </ImageView>
+    <ImageView
+        android:id="@+id/sdg_circle"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:src="@drawable/sdgs1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="180dp"
+        android:alpha="0.5"
+        >
+
+    </ImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/protestriot_regular"
+        android:text="Shine."
+        android:textColor="#0F77CA"
+        android:textSize="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="290dp">
+
+    </TextView>
+
+</RelativeLayout>
