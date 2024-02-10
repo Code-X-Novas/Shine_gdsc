@@ -18,9 +18,7 @@
         <activity
             android:name=".reg_page"
             android:exported="false" />
-        <activity
-            android:name=".example"
-            android:exported="false" />
+
         <activity
             android:name=".splashscreen"
             android:exported="true">

@@ -25,11 +25,11 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class reg_page extends AppCompatActivity {
-    TextInputEditText editTextemail, editTextpassword;
-    Button signup;
-    TextView signin;
+   private TextInputEditText editTextemail, editTextpassword;
+   private Button signup;
+   private TextView signin;
 
-    FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+  private   FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
 
 
     @Override
@@ -46,41 +46,41 @@ public class reg_page extends AppCompatActivity {
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(reg_page.this, login_page.class);
-                startActivity(intent);
-                finish();
-            }
-        });
+                String email, password;
+                email = editTextemail.getText().toString().trim();
+                password = editTextpassword.getText().toString().trim();
 
-        signup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String emial,password;
-                emial=String.valueOf(editTextemail.getText());
-                password=String.valueOf(editTextpassword.getText());
-                if (TextUtils.isEmpty(emial)){
-                    Toast.makeText(reg_page.this,"Enter Email",Toast.LENGTH_SHORT).show();
+                if (TextUtils.isEmpty(email)) {
+                    Toast.makeText(reg_page.this, "Enter Email", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if (TextUtils.isEmpty(password)) {
                     Toast.makeText(reg_page.this, "Enter Password", Toast.LENGTH_SHORT).show();
                     return;
-
                 }
-                firebaseAuth.createUserWithEmailAndPassword(emial,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+
+                firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()){
-                            Toast.makeText(reg_page.this,"Registration Sucessfull",Toast.LENGTH_SHORT).show();
-                            Intent intent=new Intent(reg_page.this, login_page.class);
+                        if (task.isSuccessful()) {
+                            Toast.makeText(reg_page.this, "Registration Successful", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(reg_page.this, MainActivity.class);
                             startActivity(intent);
                             finish();
+                        } else {
+                            Toast.makeText(reg_page.this, "Registration Failed: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
-
             }
         });
 
-    }
-}
+        signin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(reg_page.this, login_page.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+    }}

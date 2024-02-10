@@ -21,18 +21,19 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+
 public class login_page extends AppCompatActivity {
 
-    TextInputEditText editTextemail, editTextpassword;
-    Button signin;
-    TextView signup;
+   private TextInputEditText editTextemail, editTextpassword;
+   private Button signin;
+   private TextView signup;
 
-    FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+   private FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
+
         setContentView(R.layout.activity_login_page);
 
         editTextemail=findViewById(R.id.email);
