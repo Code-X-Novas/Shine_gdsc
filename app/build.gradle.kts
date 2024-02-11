@@ -9,12 +9,15 @@ android {
 
     defaultConfig {
         applicationId = "com.example.new_project"
-        minSdk = 19
+        minSdk = 21
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        android.buildFeatures.buildConfig =true
+
     }
 
     buildTypes {
@@ -38,10 +41,23 @@ dependencies {
     implementation(libs.firebase.auth)
     implementation(libs.firebase.config)
 
+    implementation ("org.maplibre.gl:android-sdk:10.0.2")
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
 }
+android {
+
+    defaultConfig {
+     buildConfigField ("String","MAPTILER_API_KEY", "\"fk7VJmEr4fSBvUQN2N1C\"")
+    }
+
+}
+
+
+
+
 
 
 
