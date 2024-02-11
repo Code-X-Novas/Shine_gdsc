@@ -19,12 +19,12 @@
             android:layout_centerInParent="true"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            android:text="Write anything you feel is wrong about children..."
-            android:textColor="#03A9F4"
-            android:textSize="25dp"
-
             android:padding="10dp"
-            android:textAppearance="@style/StylishText" />
+            android:text="Write anything you feel is wrong about children..."
+            android:textAppearance="@style/StylishText"
+
+            android:textColor="#03A9F4"
+            android:textSize="25dp" />
 
 
         <EditText
@@ -39,14 +39,23 @@
             android:textSize="19dp"
             android:textStyle="bold" />
 
+
+        <Button
+            android:id="@+id/callButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="102dp"
+            android:text="Call Child Care Services" />
+
         <Button
             android:id="@+id/submitButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/editText"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="589dp"
-            android:layout_marginEnd="161dp"
+            android:layout_marginTop="603dp"
+            android:layout_marginEnd="14dp"
             android:background="@drawable/custom_button_background"
             android:paddingStart="20dp"
             android:paddingTop="10dp"
