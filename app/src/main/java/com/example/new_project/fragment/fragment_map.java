@@ -19,6 +19,11 @@ public class fragment_map extends Fragment {
     public fragment_map(Activity activity){
         this.activity=activity;
     }
+
+    public fragment_map() {
+
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

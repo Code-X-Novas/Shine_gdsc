@@ -25,11 +25,11 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class reg_page extends AppCompatActivity {
-   private TextInputEditText editTextemail, editTextpassword;
-   private Button signup;
-   private TextView signin;
+    TextInputEditText editTextemail, editTextpassword;
+    Button signup;
+    TextView signin;
 
-  private   FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+     FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
 
 
     @Override

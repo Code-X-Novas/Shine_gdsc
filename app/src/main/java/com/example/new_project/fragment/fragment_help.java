@@ -20,6 +20,11 @@ public class fragment_help extends Fragment {
   public fragment_help(Activity activity){
       this.activity=activity;
   }
+
+    public fragment_help() {
+
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

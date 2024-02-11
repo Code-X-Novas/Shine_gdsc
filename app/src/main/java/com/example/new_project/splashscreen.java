@@ -22,7 +22,7 @@ public class splashscreen extends AppCompatActivity {
                 } catch (Exception e) {
                     e.printStackTrace();
                 } finally {
-                    Intent intent = new Intent(splashscreen.this, login_page.class);
+                    Intent intent = new Intent(splashscreen.this, MainActivity.class);
                     startActivity(intent);
                 }
             }

@@ -18,6 +18,11 @@ public class fragment_learnt extends Fragment {
     public fragment_learnt(Activity activity){
         this.activity=activity;
     }
+
+    public fragment_learnt() {
+
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

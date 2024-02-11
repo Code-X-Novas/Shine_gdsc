@@ -17,6 +17,11 @@ public class fragment_shineBot extends Fragment {
     public fragment_shineBot(Activity activity){
         this.activity=activity;
     }
+
+    public fragment_shineBot() {
+
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

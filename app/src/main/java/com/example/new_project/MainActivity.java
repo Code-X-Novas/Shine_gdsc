@@ -12,6 +12,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.example.new_project.fragment.fragment_help;
 import com.example.new_project.fragment.fragment_learnt;
@@ -35,40 +37,56 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setBottom() {
-        getSupportFragmentManager().beginTransaction().replace(R.id.main,new fragment_help(MainActivity.this)).commit();
 
 
-        BottomNavigationView bottomNavigationView= findViewById(R.id.bottom_nav);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                Fragment fragment=new fragment_help(MainActivity.this);
+
                 int item_id = menuItem.getItemId();
 
                 if (item_id == R.id.bottom_help) {
-                     fragment=new fragment_help(MainActivity.this);
+                    loadFrag(new fragment_help(), true);
+
 
                 } else if (item_id == R.id.bottom_map) {
-                    fragment=new fragment_map(MainActivity.this);
+                    loadFrag(new fragment_map(), false);
+
 
                 } else if (item_id == R.id.bottom_bot) {
-                    fragment=new fragment_shineBot(MainActivity.this);
+                    loadFrag(new fragment_shineBot(), false);
 
                 } else if (item_id == R.id.bottom_learn) {
-                    fragment=new fragment_learnt(MainActivity.this);
+                    loadFrag(new fragment_learnt(), false);
 
-                } else if (item_id == R.id.bottom_profile) {
-                    fragment=new fragment_profile(MainActivity.this);
+                } else {
+                    loadFrag(new fragment_profile(), false);
+
 
                 }
 
-                return true;
+                return false;
 
             }
         });
+        bottomNavigationView.setSelectedItemId(R.id.bottom_help);
+
+
+    }
+
+    public void loadFrag(Fragment fragment, boolean flag) {
+        FragmentManager fm = getSupportFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
+        if (flag) {
+            ft.add(R.id.main, fragment);
+        } else {
+            ft.replace(R.id.main, fragment);}
+            ft.commit();
         }
     }
+
 
 
 

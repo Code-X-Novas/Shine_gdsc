@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="StylishText">
+        <item name="android:textStyle">bold|italic</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#FF5722</item>
+    </style>
+
+
+</resources>

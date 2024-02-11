@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background shape -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/white" /> <!-- Set background color if needed -->
+        </shape>
+    </item>
+    <!-- PNG image as background -->
+    <item>
+        <bitmap
+            android:src="@drawable/childpic"
+            android:gravity="center" />
+    </item>
+</layer-list>

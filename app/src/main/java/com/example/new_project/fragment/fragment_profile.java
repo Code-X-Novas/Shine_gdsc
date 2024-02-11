@@ -18,6 +18,11 @@ public class fragment_profile extends Fragment {
     public fragment_profile(Activity activity){
         this.activity=activity;
     }
+
+    public fragment_profile() {
+
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
