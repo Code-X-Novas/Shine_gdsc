@@ -41,10 +41,13 @@ dependencies {
     implementation(libs.firebase.auth)
     implementation(libs.firebase.config)
 
-
+    implementation ("com.google.android.gms:play-services-wallet:19.3.0-beta01")
 
 
     implementation ("org.maplibre.gl:android-sdk:10.0.2")
+    implementation(libs.play.services.wallet)
+    implementation(libs.lifecycle.viewmodel.ktx)
+    implementation(libs.lifecycle.livedata.ktx)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
@@ -52,6 +55,9 @@ dependencies {
 }
 android {
 
+    buildFeatures {
+        viewBinding = true
+    }
     defaultConfig {
      buildConfigField ("String","MAPTILER_API_KEY", "\"fk7VJmEr4fSBvUQN2N1C\"")
     }

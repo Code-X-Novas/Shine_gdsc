@@ -13,12 +13,19 @@
         android:theme="@style/Theme.New_project"
         tools:targetApi="31">
         <activity
+            android:name=".DonationFormActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.gms.wallet.api.enabled"
+            android:value="true" />
+
+        <activity
             android:name=".login_page"
             android:exported="false" />
         <activity
             android:name=".reg_page"
             android:exported="false" />
-
         <activity
             android:name=".splashscreen"
             android:exported="true">

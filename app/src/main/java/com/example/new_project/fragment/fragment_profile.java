@@ -1,14 +1,17 @@
 package com.example.new_project.fragment;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.new_project.DonationFormActivity;
 import com.example.new_project.R;
 
 
@@ -28,6 +31,20 @@ public class fragment_profile extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         layout= inflater.inflate(R.layout.fragment_profile, container, false);
+        CardView donateMoneyCardView = layout.findViewById(R.id.donate_money);
+        donateMoneyCardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Open the donation form activity
+                Intent intent = new Intent(getActivity(), DonationFormActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
+
         return layout;
     }
 
