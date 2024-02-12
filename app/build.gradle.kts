@@ -41,6 +41,9 @@ dependencies {
     implementation(libs.firebase.auth)
     implementation(libs.firebase.config)
 
+
+
+
     implementation ("org.maplibre.gl:android-sdk:10.0.2")
 
     testImplementation(libs.junit)
