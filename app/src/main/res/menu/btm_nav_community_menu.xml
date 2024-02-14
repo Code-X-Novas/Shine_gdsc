@@ -2,22 +2,22 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/bottom_home_insta"
+        android:id="@+id/bottom_home_community"
         android:title="Home"
         android:icon="@drawable/baseline_handshake_24"/>
     <item
-        android:id="@+id/bottom_search_insta"
+        android:id="@+id/bottom_search_community"
         android:title="Search"
         android:icon="@drawable/baseline_handshake_24"/>
 
 
     <item
-        android:id="@+id/bottom_post_insta"
+        android:id="@+id/bottom_post_community"
         android:title="Post"
         android:icon="@drawable/twotone_aod_24"/>
 
     <item
-        android:id="@+id/bottom_profile_insta"
+        android:id="@+id/bottom_profile_community"
         android:title="Profile"
         android:icon="@drawable/baseline_account_circle_24"/>
 
