@@ -15,7 +15,8 @@
         android:layout_height="100dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="500dp"
-        app:cardElevation="50dp"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="3dp"
         android:clickable="true"
         android:focusable="true"
 
@@ -23,13 +24,23 @@
 
         >
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Donate Money"
-            android:textSize="18sp"
-            android:textColor="@android:color/holo_blue_dark"/>
+       <ImageView
+           android:layout_width="match_parent"
+           android:layout_height="100dp"
+           android:src="@drawable/donate_transperent"
+           android:scaleType="fitXY">
 
+       </ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="70dp"
+            android:text="Donate Money"
+            android:textSize="12dp">
+
+        </TextView>
 
 
     </androidx.cardview.widget.CardView>
@@ -42,10 +53,8 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="500dp"
         android:layout_marginRight="140dp"
-        app:cardElevation="50dp"
-
-
-        >
+        app:cardElevation="5dp"
+        app:cardCornerRadius="25dp">
 
 
     </androidx.cardview.widget.CardView>
@@ -57,8 +66,30 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="500dp"
         android:layout_marginLeft="140dp"
-        app:cardElevation="50dp"
+        app:cardElevation="3dp"
+        app:cardCornerRadius="25dp"
         >
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/donate_meal"
+            android:scaleType="fitXY"
+            android:layout_gravity="center"
+            >
+
+        </ImageView>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="75dp"
+            android:text="Donate a meal"
+            android:textSize="12dp">
+
+        </TextView>
 
 
     </androidx.cardview.widget.CardView>
@@ -66,12 +97,17 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/community"
-        android:layout_width="390dp"
+        android:layout_width="360dp"
         android:layout_height="100dp"
         android:layout_gravity="center_vertical"
+        android:layout_marginLeft="25dp"
+        android:background="#053257"
+        app:cardElevation="3dp"
 
-        android:layout_marginRight="30dp">
+        >
 
     </androidx.cardview.widget.CardView>
+
+
 
 </FrameLayout>

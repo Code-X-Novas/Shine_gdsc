@@ -20,18 +20,11 @@
         android:layout_height="wrap_content"
         android:hint="Enter your address" />
 
-
-    <EditText
-        android:id="@+id/UPI"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter Your Upi Id" />
-
     <EditText
         android:id="@+id/feedback"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter your feedback" />
+        android:hint="Enter your fee" />
 
 
     <!-- EditText field for amount -->
