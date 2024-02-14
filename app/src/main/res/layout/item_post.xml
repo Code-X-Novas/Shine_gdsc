@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- item_post.xml -->
+<!-- item_post.xml -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -66,5 +67,23 @@
             android:textColor="@android:color/black"
             android:text="Comments: 0" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/likeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Like"
+        android:layout_below="@id/likesCommentsLayout"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/commentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comment"
+        android:layout_below="@id/likesCommentsLayout"
+        android:layout_toEndOf="@id/likeButton"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp" />
 
 </RelativeLayout>
