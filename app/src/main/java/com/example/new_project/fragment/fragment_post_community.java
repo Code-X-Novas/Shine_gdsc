@@ -28,7 +28,7 @@ public class fragment_post_community extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        layout= inflater.inflate(R.layout.fragment_post_community2, container, false);
+        layout= inflater.inflate(R.layout.fragment_post_community, container, false);
         return layout;
     }
 }

@@ -4,10 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragment.fragment_profile">
-
-
-
+    tools:context=".fragment.fragment_profile"
+    android:background="#E2F0FF">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/donate_money"
@@ -19,9 +17,6 @@
         app:cardElevation="3dp"
         android:clickable="true"
         android:focusable="true"
-
-
-
         >
 
        <ImageView
@@ -80,7 +75,6 @@
 
         </ImageView>
 
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -90,7 +84,6 @@
             android:textSize="12dp">
 
         </TextView>
-
 
     </androidx.cardview.widget.CardView>
 
@@ -103,11 +96,34 @@
         android:layout_marginLeft="25dp"
         android:background="#053257"
         app:cardElevation="3dp"
-
+        android:paddingLeft="10dp"
+        app:cardCornerRadius="25dp"
         >
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="100dp"
+            android:src="@drawable/community_icon_transperent"
+            android:layout_marginLeft="260dp">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="Community"
+            android:textSize="40dp">
+
+        </TextView>
 
     </androidx.cardview.widget.CardView>
 
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        >
 
+    </SearchView>
 
 </FrameLayout>
