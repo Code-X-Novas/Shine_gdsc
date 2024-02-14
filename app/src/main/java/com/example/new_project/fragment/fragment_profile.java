@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 
 import com.example.new_project.DonationFormActivity;
 import com.example.new_project.R;
+import com.example.new_project.community;
 
 
 public class fragment_profile extends Fragment {
@@ -40,7 +41,14 @@ public class fragment_profile extends Fragment {
                 startActivity(intent);
             }
         });
-
+        CardView CommunityCradView= layout.findViewById(R.id.community);
+        CommunityCradView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), community.class);
+                startActivity(intent);
+            }
+        });
 
 
 
