@@ -12,7 +12,7 @@ public class post {
     }
 
 
-        private int userId;
+    private int userId;
 
     public int getUserId() {
         return userId;
@@ -61,7 +61,14 @@ public class post {
     public void setCommentsCount(int commentsCount) {
         this.commentsCount = commentsCount;
     }
-// Getters and setters
+
+    public void setLiked(boolean b) {
     }
+
+    public boolean isLiked() {
+        return false;
+    }
+// Getters and setters
+}
 
 

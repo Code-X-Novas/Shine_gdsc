@@ -36,11 +36,11 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
 
         holder.likeButton.setOnClickListener(v -> {
             if (!Post.isLiked()) {
-                Post.setLikesCount(post.getLikesCount() + 1);
+                Post.setLikesCount(Post.getLikesCount() + 1);
                 Post.setLiked(true);
             } else {
-                post.setLikesCount(post.getLikesCount() - 1);
-                post.setLiked(false);
+                Post.setLikesCount(Post.getLikesCount() - 1);
+                Post.setLiked(false);
             }
             notifyDataSetChanged(); // Update the UI
         });
@@ -65,22 +65,18 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
         Button likeButton;
         Button commentButton;
 
+
+
         public PostViewHolder(View view) {
             super(view);
-        }
-
-
-        public static class PostViewHolder extends RecyclerView.ViewHolder {
-            // Declare views for a post item
-            public PostViewHolder(@NonNull View itemView) {
-                super(itemView);
-                // Initialize views
-                captionTextView = itemView.findViewById(R.id.captionTextView);
-                likesTextView = itemView.findViewById(R.id.likesTextView);
-                commentsTextView = itemView.findViewById(R.id.commentsTextView);
-                likeButton = itemView.findViewById(R.id.likeButton);
-                commentButton = itemView.findViewById(R.id.commentButton);
-            }
+            captionTextView = view.findViewById(R.id.captionTextView);
+            likesTextView = view.findViewById(R.id.likesTextView);
+            commentsTextView = view.findViewById(R.id.commentsTextView);
+            likeButton = view.findViewById(R.id.likeButton);
+            commentButton = view.findViewById(R.id.commentButton);
         }
     }
+}
+
+
 
