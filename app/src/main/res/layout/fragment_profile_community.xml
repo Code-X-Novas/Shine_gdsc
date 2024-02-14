@@ -5,44 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".fragment.fragment_profile_community">
 
-    <!-- fragment_create_post.xml -->
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="16dp">
 
-        <ImageView
-            android:id="@+id/postImageView"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/placeholder_image"
-            android:layout_marginBottom="16dp" />
-
-        <Button
-            android:id="@+id/selectImageButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Select Image"
-            android:layout_below="@id/postImageView"
-            android:layout_marginTop="8dp" />
-
-        <EditText
-            android:id="@+id/captionEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter caption"
-            android:inputType="text" />
-
-        <Button
-            android:id="@+id/submitButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/captionEditText"
-            android:layout_marginTop="250dp"
-            android:text="Submit" />
-
-    </RelativeLayout>
 
 
 </FrameLayout>
