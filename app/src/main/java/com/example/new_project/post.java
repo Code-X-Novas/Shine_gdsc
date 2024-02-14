@@ -6,6 +6,9 @@ public class post {
     public post(int i, int i1, String imageUrl, String s, int i2, int i3, boolean b) {
     }
 
+    public static void addComment(String comment) {
+    }
+
     public int getPostId() {
         return postId;
     }

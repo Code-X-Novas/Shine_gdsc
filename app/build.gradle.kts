@@ -41,10 +41,13 @@ dependencies {
     implementation(libs.firebase.auth)
     implementation(libs.firebase.config)
 
-    implementation ("com.google.android.gms:play-services-wallet:19.3.0-beta01")
-    implementation("com.github.bumtech.glide:glide:4.16.0")
-    implementation("com.android.volley:volley:1.2.1")
-    implementation("com.github.smartiest:autoimageslider:1.4.0")
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.google.code.gson:gson:2.8.8")
+
+
+
+
+
 
 
     implementation ("org.maplibre.gl:android-sdk:10.0.2")
