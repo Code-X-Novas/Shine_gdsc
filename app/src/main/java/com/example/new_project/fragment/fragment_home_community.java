@@ -40,6 +40,14 @@ public class fragment_home_community extends Fragment {
         layout= inflater.inflate(R.layout.fragment_home_community, container, false);
 
         postList = new ArrayList<>();
+
+        postList.add(new post(1, 1, "image_url", "Caption 1", 10, 5,false));
+        postList.add(new post(2, 2, "image_url", "Caption 2", 20, 3, false));
+        postList.add(new post(3, 3, "image_url", "Caption 3", 15, 7, false));
+
+
+
+
         recyclerView = layout.findViewById(R.id.recycler_view);
         postAdapter = new PostAdapter(postList);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));

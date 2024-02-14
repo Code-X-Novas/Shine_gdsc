@@ -3,6 +3,9 @@ package com.example.new_project;
 public class post {
     private int postId;
 
+    public post(int i, int i1, String imageUrl, String s, int i2, int i3, boolean b) {
+    }
+
     public int getPostId() {
         return postId;
     }
