@@ -1,39 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <!-- fragment_create_post.xml -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="#E2F0FF">
 
     <ImageView
         android:id="@+id/postImageView"
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        android:layout_marginBottom="16dp"
         android:scaleType="centerCrop"
 
-        android:layout_marginBottom="16dp" />
+        android:src="@drawable/uploadpic" />
 
     <Button
         android:id="@+id/selectImageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Select Image"
         android:layout_below="@id/postImageView"
-        android:layout_marginTop="8dp" />
+        android:layout_marginTop="75dp"
+        android:text="Select Image" />
 
     <EditText
         android:id="@+id/captionEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter caption"
+        android:hint="Enter Caption"
         android:inputType="text" />
 
     <Button
         android:id="@+id/submitButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Submit"
         android:layout_below="@id/captionEditText"
-        android:layout_marginTop="8dp" />
+        android:layout_marginTop="169dp"
+        android:text="Submit" />
 
 </RelativeLayout>
