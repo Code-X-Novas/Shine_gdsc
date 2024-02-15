@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- activity_donation_form.xml -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -29,17 +28,17 @@
 
     <!-- EditText field for amount -->
     <EditText
-        android:id="@+id/editTextAmount"
+        android:id="@+id/editmealamount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter donation amount"
+        android:hint="How many people would you like to give food to?"
         android:inputType="numberDecimal" />
 
     <!-- Button for initiating Google Pay payment -->
     <Button
-        android:id="@+id/payButton"
+        android:id="@+id/submitbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pay with Gpay" />
+        android:text="Nourish Someone" />
 
 </LinearLayout>

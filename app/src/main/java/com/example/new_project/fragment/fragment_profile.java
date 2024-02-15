@@ -16,6 +16,7 @@ import com.example.new_project.DonationFormActivity;
 import com.example.new_project.R;
 import com.example.new_project.SliderAdapter;
 import com.example.new_project.community;
+import com.example.new_project.donate_meal;
 
 import java.util.Arrays;
 import java.util.List;
@@ -56,6 +57,16 @@ public class fragment_profile extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), community.class);
+                startActivity(intent);
+            }
+        });
+
+
+        CardView donateMealCardview=layout.findViewById(R.id.donate_meal);
+        donateMealCardview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), donate_meal.class );
                 startActivity(intent);
             }
         });
