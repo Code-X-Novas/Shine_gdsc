@@ -70,17 +70,17 @@ public class fragment_learnt extends Fragment {
     private List<Scholarship> getScholarship() {
         List<Scholarship> scholarships = new ArrayList<>();
         // Add dummy data for demonstration
-        scholarships.add(new Scholarship("Scholarship 1", "Description 1"));
-        scholarships.add(new Scholarship("Scholarship 2", "Description 2"));
-        scholarships.add(new Scholarship("Scholarship 3", "Description 3"));
-        scholarships.add(new Scholarship("Scholarship 4", "Description 4"));
-        scholarships.add(new Scholarship("Scholarship 5", "Description 5"));
-        scholarships.add(new Scholarship("Scholarship 6", "Description 6"));
-        scholarships.add(new Scholarship("Scholarship 7", "Description 7"));
-        scholarships.add(new Scholarship("Scholarship 8", "Description 8"));
-        scholarships.add(new Scholarship("Scholarship 9", "Description 9"));
-        scholarships.add(new Scholarship("Scholarship 10", "Description 10"));
-        scholarships.add(new Scholarship("Scholarship 11", "Description 11"));
+        scholarships.add(new Scholarship("Scheme For Residential Education For Students in High Schools in Targeted Areas (SHRESHTA)", "https://socialjustice.gov.in/schemes/41"));
+        scholarships.add(new Scholarship("National Fellowship for OBC Students (NF-OBC)", "https://socialjustice.gov.in/schemes/7"));
+        scholarships.add(new Scholarship("Pre- Matric Scholarships Scheme for Scheduled Castes & Others", "https://socialjustice.gov.in/schemes/23"));
+        scholarships.add(new Scholarship("Post-Matric Scholarship for SC students", "https://socialjustice.gov.in/schemes/25"));
+        scholarships.add(new Scholarship("Central Sector Scholarship of Top Class Education for SC Students", "https://socialjustice.gov.in/schemes/27"));
+        scholarships.add(new Scholarship("SCHOLARSHIP FOR PM CARES CHILDREN", "https://socialjustice.gov.in/schemes/102"));
+        scholarships.add(new Scholarship("Dr. Ambedkar Scheme of Interest Subsidy on Educational Loan for Overseas Studies for OBCs & EBCs", "https://socialjustice.gov.in/schemes/11"));
+        scholarships.add(new Scholarship("Atal Vayo Abhyuday Yojana (AVYAY)", "https://socialjustice.gov.in/schemes/43"));
+        scholarships.add(new Scholarship("Scheme of National Awards for Outstanding Services in the field of Prevention of Alcoholism and Substance (Drug) Abuse", "https://socialjustice.gov.in/schemes/90"));
+        scholarships.add(new Scholarship("Credit Enhancement Guarantee Scheme for the Scheduled Castes (SCs)", "https://socialjustice.gov.in/schemes/32"));
+        scholarships.add(new Scholarship("Scheme of Assistance to Scheduled Castes Development Corporations (SCDCs)", "https://socialjustice.gov.in/schemes/36"));
         return scholarships;
     }
 
