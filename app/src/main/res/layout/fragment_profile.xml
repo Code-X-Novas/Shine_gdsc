@@ -7,6 +7,22 @@
     tools:context=".fragment.fragment_profile"
     android:background="#E2F0FF">
 
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        tools:ignore="MissingConstraint"
+        android:layout_margin="9dp"/>
+
+
+
+
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+    </SearchView>
+
     <androidx.cardview.widget.CardView
         android:id="@+id/donate_money"
         android:layout_width="100dp"
@@ -119,11 +135,6 @@
 
     </androidx.cardview.widget.CardView>
 
-    <SearchView
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        >
 
-    </SearchView>
 
 </FrameLayout>

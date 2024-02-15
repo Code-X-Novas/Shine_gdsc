@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import androidx.viewpager2.widget.ViewPager2;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,10 +14,19 @@ import android.view.ViewGroup;
 
 import com.example.new_project.DonationFormActivity;
 import com.example.new_project.R;
+import com.example.new_project.SliderAdapter;
 import com.example.new_project.community;
+
+import java.util.Arrays;
+import java.util.List;
 
 
 public class fragment_profile extends Fragment {
+
+
+    private ViewPager2 viewPager;
+    private SliderAdapter sliderAdapter;
+
     View layout;
     Activity activity;
     public fragment_profile(Activity activity){
@@ -49,6 +59,18 @@ public class fragment_profile extends Fragment {
                 startActivity(intent);
             }
         });
+
+
+
+        viewPager = layout.findViewById(R.id.viewpager);
+        viewPager.setOrientation(ViewPager2.ORIENTATION_HORIZONTAL);
+
+        List<Integer> images = Arrays.asList(R.drawable.resturant3, R.drawable.resturantpic1, R.drawable.resturantpic2);
+        sliderAdapter = new SliderAdapter(images);
+
+        viewPager.setAdapter(sliderAdapter);
+
+
 
 
 

@@ -45,6 +45,12 @@ dependencies {
     implementation ("com.google.code.gson:gson:2.8.8")
 
 
+    implementation("androidx.viewpager2:viewpager2:1.0.0")
+
+
+
+
+
 
 
 
