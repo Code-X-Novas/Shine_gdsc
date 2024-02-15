@@ -37,6 +37,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/captionEditText"
         android:layout_marginTop="169dp"
-        android:text="Submit" />
+        android:text="Upload" />
 
 </RelativeLayout>

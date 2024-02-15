@@ -1,14 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<!-- dialog_feedback.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".fragment.fragment_search_community">
+    android:layout_height="wrap_content"
+    android:background="#E2F0FF">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/text_title"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:text="Feedback and Discussion Forum"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="@color/blue"
+        android:textColor="@android:color/white" />
 
-</FrameLayout>
+    <EditText
+        android:id="@+id/edit_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your feedback..."
+        android:padding="16dp"
+        android:layout_below="@id/text_title" />
+
+    <TextView
+        android:id="@+id/text_discussion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Discussions:"
+        android:textSize="18sp"
+        android:padding="16dp"
+        android:layout_below="@id/edit_feedback"
+        android:layout_marginTop="16dp" />
+
+    <RelativeLayout
+        android:id="@+id/recycler_discussions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_discussion"
+        android:layout_marginTop="8dp" />
+
+    <EditText
+        android:id="@+id/edit_discussion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your discussion topic..."
+        android:padding="16dp"
+        android:layout_below="@id/recycler_discussions"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/button_submit_feedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit Feedback"
+        android:layout_below="@id/edit_discussion"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/button_submit_discussion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit Discussion Topic"
+        android:layout_below="@id/button_submit_feedback"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/button_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:layout_below="@id/button_submit_discussion"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+</RelativeLayout>

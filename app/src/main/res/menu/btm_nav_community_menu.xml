@@ -4,11 +4,11 @@
     <item
         android:id="@+id/bottom_home_community"
         android:title="Home"
-        android:icon="@drawable/baseline_handshake_24"/>
+        android:icon="@drawable/baseline_home_24"/>
     <item
         android:id="@+id/bottom_search_community"
         android:title="Search"
-        android:icon="@drawable/baseline_handshake_24"/>
+        android:icon="@drawable/baseline_add_24"/>
 
 
     <item
