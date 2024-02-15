@@ -41,6 +41,17 @@ public class fragment_home_community extends Fragment {
 
          RecyclerView recyclerView = layout.findViewById(R.id.recyclerViewComuunity);
          recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
+
+         List<post> postList = new ArrayList<>();
+         postList.add(new post(1, 1, "https://www.shutterstock.com/image-photo/smiling-faces-young-children-having-fun-639450937", "First post", 0, 0, false));
+         postList.add(new post(2, 2, "https://www.shutterstock.com/image-photo/girls-posing-photo-shoot-rural-village-392930821", "Second post", 0, 0, false));
+         postList.add(new post(3, 3, "https://www.shutterstock.com/image-photo/girls-posing-photo-shoot-rural-village-392930821", "Third post", 0, 0, false));
+
+
+
+
+
          PostAdapter adapter = new PostAdapter(postList);
          recyclerView.setAdapter(adapter);
 

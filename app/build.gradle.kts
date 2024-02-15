@@ -50,6 +50,8 @@ dependencies {
 
 
 
+
+
     implementation ("org.maplibre.gl:android-sdk:10.0.2")
     implementation(libs.play.services.wallet)
     implementation(libs.lifecycle.viewmodel.ktx)
