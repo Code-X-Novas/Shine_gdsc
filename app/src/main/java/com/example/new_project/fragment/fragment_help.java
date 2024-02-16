@@ -1,24 +1,20 @@
 package com.example.new_project.fragment;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.media.MediaCas;
 import android.net.Uri;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
-import android.os.Message;
-import android.se.omapi.Session;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
+import androidx.fragment.app.Fragment;
+
 import com.example.new_project.R;
 
-import java.net.Authenticator;
+
+
 import java.util.Properties;
 
 
@@ -44,10 +40,29 @@ public class fragment_help extends Fragment {
         callButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Replace "911" with the actual phone number of child care services
+
                 dialPhoneNumber("234");
             }
         });
+
+
+        reportEditText = layout.findViewById(R.id.editText);
+        submitButton = layout.findViewById(R.id.submitButton);
+        submitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        String reportContent = reportEditText.getText().toString();
+                        String recipient = "pradhanchandan136@gmail.com";
+                        String subject = "Report from Your App";
+                        JavaMailSender.sendEmail(recipient, subject, reportContent);
+                    }
+                }).start();
+            }
+        });
+
 
         return layout;
     }
