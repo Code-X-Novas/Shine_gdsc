@@ -8,6 +8,7 @@ import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,6 +30,17 @@ public class fragment_profile extends Fragment {
 
     private ViewPager2 viewPager;
     private SliderAdapter sliderAdapter;
+    private Handler sliderHandler = new Handler();
+    private Runnable sliderRunnable = new Runnable() {
+        @Override
+        public void run() {
+            viewPager.setCurrentItem(viewPager.getCurrentItem() + 1);
+        }
+    };
+
+
+
+
 
     View layout;
     Activity activity;
@@ -99,20 +111,40 @@ public class fragment_profile extends Fragment {
 
 
 
-        viewPager = layout.findViewById(R.id.viewpager);
-        viewPager.setOrientation(ViewPager2.ORIENTATION_HORIZONTAL);
-
-        List<Integer> images = Arrays.asList(R.drawable.resturant3, R.drawable.resturantpic1, R.drawable.resturantpic2);
-        sliderAdapter = new SliderAdapter(images);
-
-        viewPager.setAdapter(sliderAdapter);
 
 
+            viewPager = layout.findViewById(R.id.viewpager);
+            viewPager.setOrientation(ViewPager2.ORIENTATION_HORIZONTAL);
+
+            List<Integer> images = Arrays.asList(R.drawable.resturant3, R.drawable.resturantpic1, R.drawable.resturantpic2);
+            sliderAdapter = new SliderAdapter(images);
+
+            viewPager.setAdapter(sliderAdapter);
+
+            // Starting auto-scrolling
+            startSliderAutoScroll();
 
 
 
 
-        return layout;
+
+
+
+            return layout;
     }
+        private void startSliderAutoScroll() {
+            sliderHandler.postDelayed(sliderRunnable, 3000); // Delay in milliseconds (adjust as needed)
+        }
+
+        private void stopSliderAutoScroll() {
+            sliderHandler.removeCallbacks(sliderRunnable);
+        }
+
+        @Override
+        public void onDestroyView() {
+            super.onDestroyView();
+
+            stopSliderAutoScroll();
+        }
 
   }
