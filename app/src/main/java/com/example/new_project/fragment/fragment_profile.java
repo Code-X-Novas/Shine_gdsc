@@ -16,6 +16,8 @@ import com.example.new_project.DonationFormActivity;
 import com.example.new_project.R;
 import com.example.new_project.SliderAdapter;
 import com.example.new_project.community;
+import com.example.new_project.donate_book;
+import com.example.new_project.donate_clothes;
 import com.example.new_project.donate_meal;
 
 import java.util.Arrays;
@@ -70,6 +72,30 @@ public class fragment_profile extends Fragment {
                 startActivity(intent);
             }
         });
+
+        CardView donatebookCardview=layout.findViewById(R.id.donate_book);
+        donatebookCardview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), donate_book.class);
+                startActivity(intent);
+            }
+        });
+
+
+        CardView donateclothesCardview=layout.findViewById(R.id.donate_clothes);
+        donateclothesCardview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), donate_clothes.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
+
 
 
 

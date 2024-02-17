@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:hint="Enter your name" />
 
-
+    <!-- EditText field for address -->
     <EditText
         android:id="@+id/editTextAddress"
         android:layout_width="match_parent"
@@ -27,19 +27,19 @@
         android:hint="Enter your feedback" />
 
 
-
+    <!-- EditText field for amount -->
     <EditText
-        android:id="@+id/editmealamount"
+        android:id="@+id/editbook"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="How many people would you like to give food to?"
+        android:hint="no of clothes"
         android:inputType="numberDecimal" />
 
 
     <Button
-        android:id="@+id/submitbtn"
+        android:id="@+id/clothessharing"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nourish Someone" />
+        android:text="donate clothes for  needy children" />
 
 </LinearLayout>

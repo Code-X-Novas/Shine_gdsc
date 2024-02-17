@@ -64,7 +64,9 @@
         android:layout_marginTop="600dp"
         android:layout_marginRight="140dp"
         app:cardCornerRadius="25dp"
-        app:cardElevation="5dp">
+        app:cardElevation="5dp"
+        android:clickable="true"
+        android:focusable="true">
 
 
         <ImageView
@@ -165,7 +167,8 @@
         android:layout_marginRight="140dp"
         app:cardElevation="5dp"
         app:cardCornerRadius="25dp"
-        >
+        android:clickable="true"
+        android:focusable="true">
 
 
         <ImageView
