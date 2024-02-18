@@ -7,6 +7,12 @@ android {
     namespace = "com.example.new_project"
     compileSdk = 34
 
+
+    packagingOptions {
+        exclude ("META-INF/INDEX.LIST")
+        exclude ("META-INF/DEPENDENCIES")
+    }
+
     defaultConfig {
         applicationId = "com.example.new_project"
         minSdk = 21
@@ -52,6 +58,8 @@ dependencies {
 
 
 
+    implementation ("com.google.cloud:google-cloud-dialogflow:2.1.0")
+    implementation ("io.grpc:grpc-okhttp:1.30.0")
 
 
 
@@ -61,25 +69,22 @@ dependencies {
 
 
 
-    implementation ("org.maplibre.gl:android-sdk:10.0.2")
+
+
+
+
+
     implementation(libs.play.services.wallet)
     implementation(libs.lifecycle.viewmodel.ktx)
     implementation(libs.lifecycle.livedata.ktx)
+    implementation(libs.recyclerview)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
 }
-android {
 
-    buildFeatures {
-        viewBinding = true
-    }
-    defaultConfig {
-     buildConfigField ("String","MAPTILER_API_KEY", "\"fk7VJmEr4fSBvUQN2N1C\"")
-    }
 
-}
 
 
 
