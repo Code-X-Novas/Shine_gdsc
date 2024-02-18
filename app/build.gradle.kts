@@ -60,6 +60,8 @@ dependencies {
 
     implementation ("com.google.cloud:google-cloud-dialogflow:2.1.0")
     implementation ("io.grpc:grpc-okhttp:1.30.0")
+    implementation ("com.google.guava:guava:31.0.1-android")
+
 
 
 
