@@ -7,6 +7,8 @@ import static java.util.List.*;
 import com.google.common.collect.Lists;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -42,6 +44,8 @@ import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
 
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -50,26 +54,19 @@ import android.widget.Toast;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class fragment_shineBot extends Fragment implements BotReply {
+public class fragment_shineBot extends Fragment  {
 
-    RecyclerView chatView;
-    ChatAdapter chatAdapter;
-    List<Message> messageList = new ArrayList<>();
-    EditText editMessage;
-    ImageButton btnSend;
 
-    // DialogFlow
-    private SessionsClient sessionsClient;
-    private SessionName sessionName;
-    private String uuid = UUID.randomUUID().toString();
-    private String TAG = "chatFragment";
 
+    private static final String WEBSITE_URL = "https://shine-bot-website.vercel.app/";
+    private WebView webView;
 
 
     View layout;
     Activity activity;
-    public fragment_shineBot(Activity activity){
-        this.activity=activity;
+
+    public fragment_shineBot(Activity activity) {
+        this.activity = activity;
     }
 
     public fragment_shineBot() {
@@ -77,39 +74,26 @@ public class fragment_shineBot extends Fragment implements BotReply {
     }
 
 
-
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        layout= inflater.inflate(R.layout.fragment_shine_bot, container, false);
+        layout = inflater.inflate(R.layout.fragment_shine_bot, container, false);
 
-        chatView = layout.findViewById(R.id.chatView);
-        editMessage = layout.findViewById(R.id.editMessage);
-        btnSend = layout.findViewById(R.id.btnSend);
 
-        chatAdapter = new ChatAdapter(messageList, getActivity());
-        chatView.setAdapter(chatAdapter);
+        webView = layout.findViewById(R.id.webview);
+        Button chatbotButton = layout.findViewById(R.id.chatbot_button);
 
-        btnSend.setOnClickListener(new View.OnClickListener() {
+        chatbotButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                String message = editMessage.getText().toString();
-                if (!message.isEmpty()) {
-                    messageList.add(new Message(message, false));
-                    editMessage.setText("");
-                    sendMessageToBot(message);
-                    chatAdapter.notifyDataSetChanged();
-                    chatView.scrollToPosition(messageList.size() - 1);
-                } else {
-                    makeText(getActivity(), "Please enter text!", Toast.LENGTH_SHORT).show();
-                }
+            public void onClick(View v) {
+                // Open the website URL in the device's default browser
+                Uri uri = Uri.parse("https://shine-bot-website.vercel.app/");
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
             }
         });
-
-        setUpBot();
 
 
 
@@ -118,46 +102,7 @@ public class fragment_shineBot extends Fragment implements BotReply {
 
         return layout;
     }
-    private void setUpBot() {
-        try {
-            InputStream stream = this.getResources().openRawResource(R.raw.credential);
-            GoogleCredentials credentials = GoogleCredentials.fromStream(stream)
-                    .createScoped(Lists.newArrayList("https://www.googleapis.com/auth/cloud-platform"));
-            String projectId = ((ServiceAccountCredentials) credentials).getProjectId();
-
-            SessionsSettings.Builder settingsBuilder = SessionsSettings.newBuilder();
-            SessionsSettings sessionsSettings = settingsBuilder.setCredentialsProvider(
-                    FixedCredentialsProvider.create(credentials)).build();
-            sessionsClient = SessionsClient.create(sessionsSettings);
-            sessionName = SessionName.of(projectId, uuid);
-
-            Log.d(TAG, "projectId : " + projectId);
-        } catch (Exception e) {
-            Log.d(TAG, "setUpBot: " + e.getMessage());
-        }
-    }
-
-    private void sendMessageToBot(String message) {
-        QueryInput input = QueryInput.newBuilder()
-                .setText(TextInput.newBuilder().setText(message).setLanguageCode("en-US")).build();
-        new SendMessageInBg(this, sessionName, sessionsClient, input).execute();
-    }
-
-    @Override
-    public void callback(DetectIntentResponse returnResponse) {
-        if(returnResponse!=null) {
-            String botReply = returnResponse.getQueryResult().getFulfillmentText();
-            if(!botReply.isEmpty()){
-                messageList.add(new Message(botReply, true));
-                chatAdapter.notifyDataSetChanged();
-                Objects.requireNonNull(chatView.getLayoutManager()).scrollToPosition(messageList.size() - 1);
-            }else {
-                Toast.makeText(getActivity(), "Something went wrong", Toast.LENGTH_SHORT).show();
-            }
-        } else {
-            Toast.makeText(getActivity(), "Failed to connect!", Toast.LENGTH_SHORT).show();
-        }
-    }}
+}
 
 
 
