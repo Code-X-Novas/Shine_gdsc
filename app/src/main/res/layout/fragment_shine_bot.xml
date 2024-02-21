@@ -2,12 +2,13 @@
 <!-- fragment_shine_bot.xml -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#E2F0FF">
 
     <WebView
         android:id="@+id/webview"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_width="0dp"
+        android:layout_height="0dp" />
 
     <Button
         android:id="@+id/chatbot_button"
@@ -17,7 +18,18 @@
         android:background="@drawable/roundbtn"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
-        android:layout_centerInParent="true"/>
+        android:layout_centerInParent="true"
+        />
+
+    <ImageView
+        android:layout_marginTop="30dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/robot_face"
+        android:layout_centerHorizontal="true"
+        >
+
+    </ImageView>
 
 </RelativeLayout>
 

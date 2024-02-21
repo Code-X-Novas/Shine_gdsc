@@ -1,45 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:background="#E2F0FF">
+    android:background="#E2F0FF"
+    >
 
-    <!-- EditText field for name -->
+
+    <ImageView
+        android:id="@+id/image_donate"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+       android:src="@drawable/donate_meal_page_final">
+
+    </ImageView>
+
+
     <EditText
+        android:layout_centerHorizontal="true"
         android:id="@+id/editTextName"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/image_donate"
+        android:layout_marginTop="30dp"
         android:hint="Enter your name" />
 
-
     <EditText
+        android:layout_centerHorizontal="true"
         android:id="@+id/editTextAddress"
-        android:layout_width="match_parent"
+        android:layout_below="@id/editTextName"
+        android:layout_marginTop="30dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:hint="Enter your address" />
 
     <EditText
+        android:layout_centerHorizontal="true"
         android:id="@+id/feedback"
-        android:layout_width="match_parent"
+        android:layout_below="@id/editTextAddress"
+        android:layout_marginTop="30dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:hint="Enter your feedback" />
 
 
 
     <EditText
+        android:layout_centerHorizontal="true"
         android:id="@+id/editmealamount"
-        android:layout_width="match_parent"
+        android:layout_below="@id/feedback"
+        android:layout_marginTop="30dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:hint="How many people would you like to give food to?"
+        android:hint="Amount of meal you can provide"
         android:inputType="numberDecimal" />
 
 
     <Button
+        android:layout_centerHorizontal="true"
         android:id="@+id/submitbtn"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/editmealamount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Nourish Someone" />
 
-</LinearLayout>
+</RelativeLayout>

@@ -1,28 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
+
     android:background="#E2F0FF">
 
-    <!-- EditText field for name -->
+    <ImageView
+        android:layout_centerHorizontal="true"
+        android:id="@+id/image_donate_clothes"
+        android:layout_marginTop="50dp"
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:src="@drawable/donate_clothes_page">
+
+    </ImageView>
+
+
     <EditText
+        android:layout_below="@id/image_donate_clothes"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
         android:id="@+id/editTextName"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:hint="Enter your name" />
 
     <!-- EditText field for address -->
     <EditText
         android:id="@+id/editTextAddress"
-        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/editTextName"
+        android:layout_centerHorizontal="true"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:hint="Enter your address" />
 
     <EditText
         android:id="@+id/feedback"
-        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/editTextAddress"
+        android:layout_centerHorizontal="true"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:hint="Enter your feedback" />
 
@@ -30,16 +48,22 @@
     <!-- EditText field for amount -->
     <EditText
         android:id="@+id/editbook"
-        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/feedback"
+        android:layout_width="350dp"
+        android:layout_centerHorizontal="true"
         android:layout_height="wrap_content"
-        android:hint="no of clothes"
+        android:hint="No. of clothes"
         android:inputType="numberDecimal" />
 
 
     <Button
         android:id="@+id/clothessharing"
+        android:layout_below="@+id/editbook"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="donate clothes for  needy children" />
+        android:text="Donate a Pair" />
 
-</LinearLayout>
+</RelativeLayout>

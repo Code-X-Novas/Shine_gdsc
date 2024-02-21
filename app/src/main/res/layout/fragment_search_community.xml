@@ -2,8 +2,17 @@
 <!-- dialog_feedback.xml -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="#E2F0FF">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="190dp"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/discussion_page"
+        >
+
+    </ImageView>
 
     <TextView
         android:id="@+id/text_title"
@@ -17,8 +26,10 @@
         android:textColor="@android:color/white" />
 
     <EditText
+        android:layout_marginTop="90dp"
         android:id="@+id/edit_feedback"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
+        android:layout_centerHorizontal="true"
         android:layout_height="wrap_content"
         android:hint="Enter your feedback..."
         android:padding="16dp"
@@ -26,7 +37,8 @@
 
     <TextView
         android:id="@+id/text_discussion"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
+        android:layout_centerHorizontal="true"
         android:layout_height="wrap_content"
         android:text="Discussions:"
         android:textSize="18sp"
@@ -43,7 +55,8 @@
 
     <EditText
         android:id="@+id/edit_discussion"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
+        android:layout_centerHorizontal="true"
         android:layout_height="wrap_content"
         android:hint="Enter your discussion topic..."
         android:padding="16dp"

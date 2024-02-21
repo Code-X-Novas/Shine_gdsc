@@ -5,37 +5,42 @@
     android:layout_height="match_parent"
     tools:context=".fragment.fragment_help">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
+
+    <ImageView
+        android:id="@+id/background_image_child"
+        android:layout_width="500dp"
         android:layout_height="match_parent"
+        android:background="@drawable/help_section_bckimg"
+        android:scaleType="fitXY">
 
-        android:background="@drawable/background_with_image">
-
-
-        <TextView
-            android:id="@+id/reportTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:padding="10dp"
-            android:text="Write anything you feel is wrong about children..."
-            android:textAppearance="@style/StylishText"
-
-            android:textColor="#03A9F4"
-            android:textSize="25dp" />
+    </ImageView>
 
 
-        <EditText
+    <TextView
+        android:id="@+id/reportTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="170dp"
+        android:layout_marginEnd="16dp"
+        android:outlineAmbientShadowColor="@color/blue"
+        android:padding="10dp"
+        android:shadowColor="@color/blue"
+        android:text="Every child deserves a champion,\nan adult who will never give up on them.\n\n-Rita Pierson"
+        android:textAppearance="@font/protestriot_regular"
+        android:textColor="#03A9F4"
+        android:textSize="35dp"
+        android:textStyle="bold" />
+
+    <EditText
             android:id="@+id/editText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:background="@drawable/edittext_background"
+            android:layout_marginTop="50dp"
+
             android:hint="Enter your report here"
-            android:padding="10dp"
-            android:textColor="@color/black"
+
+            android:textColor="@color/white"
             android:textSize="16dp"
             android:textStyle="bold" />
 
@@ -44,28 +49,26 @@
             android:id="@+id/callButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="102dp"
-            android:text="Call Child Care Services" />
+           android:layout_marginTop="550dp"
+            android:layout_marginLeft="80dp"
+            android:text="Call Child Care Services"
+            />
 
         <Button
             android:id="@+id/submitButton"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/editText"
+            android:layout_height="50dp"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="607dp"
-            android:layout_marginEnd="17dp"
+            android:layout_marginTop="620dp"
             android:background="@drawable/custom_button_background"
-            android:paddingStart="20dp"
-            android:paddingTop="10dp"
+            android:layout_marginLeft="150dp"
             android:paddingEnd="20dp"
             android:paddingBottom="10dp"
             android:text="Submit"
             android:textColor="@color/white"
-            android:textSize="18sp" />
+            android:textSize="16sp" />
 
 
-    </RelativeLayout>
+
 
 </FrameLayout>

@@ -1,28 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
     android:background="#E2F0FF">
 
-    <!-- EditText field for name -->
+    <ImageView
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:src="@drawable/donate_books_transperent_page">
+
+    </ImageView>
+
+
     <EditText
         android:id="@+id/editTextName"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_centerHorizontal="true"
         android:hint="Enter your name" />
 
 
     <EditText
+        android:layout_below="@id/editTextName"
         android:id="@+id/editTextAddress"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
+        android:layout_centerHorizontal="true"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         android:hint="Enter your address" />
 
     <EditText
         android:id="@+id/feedback"
-        android:layout_width="match_parent"
+        android:layout_below="@id/editTextAddress"
+        android:layout_marginTop="30dp"
+        android:layout_width="350dp"
+        android:layout_centerHorizontal="true"
         android:layout_height="wrap_content"
         android:hint="Enter your feedback" />
 
@@ -30,9 +46,12 @@
 
     <EditText
         android:id="@+id/editbook"
-        android:layout_width="match_parent"
+        android:layout_below="@id/feedback"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:hint="no of books"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:hint="No.of books"
         android:inputType="numberDecimal" />
 
 
@@ -40,6 +59,9 @@
         android:id="@+id/shareurknowledgebtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/editbook"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="52dp"
         android:text="Share Your Knowledge" />
 
-</LinearLayout>
+</RelativeLayout>
