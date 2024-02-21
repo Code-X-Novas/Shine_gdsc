@@ -88,7 +88,7 @@ public class fragment_shineBot extends Fragment  {
         chatbotButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Open the website URL in the device's default browser
+
                 Uri uri = Uri.parse("https://shine-bot-website.vercel.app/");
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
