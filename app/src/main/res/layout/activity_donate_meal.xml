@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/image_donate"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:layout_marginTop="100dp"
         android:layout_centerHorizontal="true"
        android:src="@drawable/donate_meal_page_final">
