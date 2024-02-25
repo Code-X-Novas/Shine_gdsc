@@ -29,8 +29,9 @@ The Shine App leverages the following Google products to deliver its features an
 
 <p align="center">
   <img src="android_studio_icon.png" alt="Image 1" width="100" style="display: inline-block; margin-right: 10px;">
-  <img src="android_studio_icon.png" alt="Image 2" width="100" style="display: inline-block; margin-right: 10px;">
-  <img src="android_studio_icon.png" alt="Image 3" width="100" style="display: inline-block;">
+  <img src="googlemaps_icon.png" alt="Image 2" width="100" style="display: inline-block; margin-right: 10px;">
+   <img src="googlepay_icon.png" alt="Image 1" width="100" style="display: inline-block; margin-right: 10px;">
+  <img src="dialogflow_icon.png" alt="Image 3" width="100" style="display: inline-block;">
 </p>
 
 
