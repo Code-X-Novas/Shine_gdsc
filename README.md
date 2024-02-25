@@ -28,6 +28,8 @@ The Shine App leverages the following Google products to deliver its features an
 
 
 <img src="android_studio_icon.png" alt="Android Studio" width="200">
+<img src="android_studio_icon.png" alt="Android Studio" width="100">
+
 
 
 
