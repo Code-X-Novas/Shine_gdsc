@@ -27,8 +27,17 @@ The Shine App leverages the following Google products to deliver its features an
 - **Firebase**: A comprehensive mobile development platform provided by Google. Firebase offers features such as authentication, real-time database, cloud storage, and more, which are utilized in various aspects of the Shine App to enhance user experience and app functionality.
 
 
-<img src="android_studio_icon.png" alt="Android Studio" width="200">
-<img src="android_studio_icon.png" alt="Android Studio" width="100">
+<p align="center">
+  <img src="android_studio_icon.png" alt="Image 1" width="100">
+</p>
+
+<p align="center">
+  <img src="android_studio_icon.png" alt="Image 2" width="200">
+</p>
+
+<p align="center">
+  <img src="android_studio_icon.png" alt="Image 3" width="200">
+</p>
 
 
 
