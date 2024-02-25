@@ -31,7 +31,7 @@ The Shine App leverages the following Google products to deliver its features an
 
 To run the Shine app locally, follow these steps:
 
-1. Clone this repository to your local machine using `git clone https://github.com/your-username/shine-app.git`.
+1. Clone this repository to your local machine using `https://github.com/Code-X-Novas/Shine_gdsc.git`.
 2. Open the project in Android Studio.
 3. Build and run the project on an emulator or physical device.
 
